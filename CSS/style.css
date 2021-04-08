@@ -1,0 +1,149 @@
+/* Лоадер */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+
+
+.loader {
+    background: #111;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.loader div {
+    background: rgb(170, 13, 13);
+    width: 16px;
+    height: 32px;
+    margin-left: 10px;
+    animation: loader 1.2s infinite;
+}
+
+@keyframes loader {
+    50% {
+        height: 64px;
+    }
+}
+
+.loader div:nth-child(1) {
+    background: #FF9F1A;
+    animation-delay: -0.40s;
+}
+
+.loader div:nth-child(2) {
+    background: #FED330;
+    animation-delay: -0.20s;
+}
+
+.loader div:nth-child(3) {
+    background: #FFFA65;
+    animation-delay: 0s;
+}
+
+
+/* куб */
+.area-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#area {
+    width: 300px;
+    height: 300px;
+    background-color: #ffcb08;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    font-size: 34px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#modal-result-wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(4 11 8 / 80%);
+
+}
+
+
+
+#modal-window {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#content {
+    font-size: 24px;
+}
+
+#btn-close {
+    width: 190px;
+    height: 40px;
+    background: #FF9F1A;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+}
+
+#btn-close:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: transform 0.4s;
+
+
+}
